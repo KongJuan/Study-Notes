@@ -859,13 +859,13 @@ Stream到底是什么呢？
 
 #### Stream 的操作三个步骤
 
- 1- 创建 Stream
+1- 创建 Stream
 一个数据源（如：集合、数组），获取一个流
 
- 2- 中间操作
+2- 中间操作
 一个中间操作链，对数据源的数据进行处理
 
- 3- 终止操作(终端操作)
+3- 终止操作(终端操作)
 一旦执行终止操作，就执行中间操作链，并产生结果。之后，不会再被使用
 
 ### 1.5.3创建Stream
@@ -885,9 +885,11 @@ public class Demo04GetStream {
         List<String> list = new ArrayList<>();
         // ...
         Stream<String> stream1 = list.stream();
+        
         Set<String> set = new HashSet<>();
         // ...
         Stream<String> stream2 = set.stream();
+        
         Vector<String> vector = new Vector<>();
         // ...
         Stream<String> stream3 = vector.stream();
@@ -907,7 +909,19 @@ Java8 中的 Arrays 的静态方法 stream() 可以获取数组流：
 - `public static LongStream stream(long[] array)`
 - `public static DoubleStream stream(double[] array)`
 
-
+```java
+@Test
+public void test1(){
+    //通过数组
+    int[] arr=new int[]{1,2,3,4,5,6};
+    IntStream stream= Arrays.stream(arr);
+    //通过数组对象创建Stream
+    Employee e1 = new Employee(1001,"Tom");
+    Employee e2 = new Employee(1002,"Jerry");
+    Employee[] arr1 = new Employee[]{e1,e2};
+    Stream<Employee> stream1 = Arrays.stream(arr1);
+}
+```
 
 #### 创建 Stream方式三：通过Stream的of()
 
@@ -915,18 +929,31 @@ Java8 中的 Arrays 的静态方法 stream() 可以获取数组流：
 
 - `public static<T> Stream<T> of(T... values)` : 返回一个流
 
-
+```java
+@Test
+public void test3(){
+	Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6);
+}
+```
 
 #### 创建 Stream方式四：创建无限流
 
-可以使用静态方法 Stream.iterate() 和 Stream.generate(), 创建无限流。
+可以使用静态方法 Stream.iterate() 或者Stream.generate() 创建无限流。
 
 - 迭代
   `public static<T> Stream<T> iterate(final T seed, final UnaryOperator<T> f)` 
 - 生成
   `public static<T> Stream<T> generate(Supplier<T> s)` 
 
-
+```java
+@Test
+public void test4(){
+    ///迭代
+    Stream stream=Stream.iterate(0,t -> t + 2);
+    //生成
+    Stream stream1=Stream.generate(Math::random);
+}
+```
 
 ### 1.5.4Stream的中间操作
 
@@ -951,6 +978,15 @@ Java8 中的 Arrays 的静态方法 stream() 可以获取数组流：
   ```
 
   `distinct()` 筛选，通过流所生成元素的 hashCode() 和 equals() 去除重复元素
+
+  ```java
+  @Test
+  public void test3(){
+      //去重
+      Stream<String> original = Stream.of("张无忌","张三丰","周芷若","张无忌","张无忌");
+      Stream<String> result=original.distinct();
+  }
+  ```
 
   `limit(long maxSize)`可以对流进行截取，只取用前n个
 
@@ -981,29 +1017,29 @@ Java8 中的 Arrays 的静态方法 stream() 可以获取数组流：
 
 - **匹配与查找**
 
-  `allMatch(Predicate p)` 检查是否匹配所有元素
+  `boolean allMatch(Predicate p)` 检查是否匹配所有元素
 
-  `anyMatch(Predicate p)` 检查是否至少匹配一个元素
+  `boolean anyMatch(Predicate p)` 检查是否至少匹配一个元素
 
-  `noneMatch(Predicate p)` 检查是否没有匹配所有元素
+  `boolean noneMatch(Predicate p)` 检查是否没有匹配所有元素
 
-  `findFirst()` 返回第一个元素
+  `Optional<T> findFirst()` 返回第一个元素
 
-  `findAny()` 返回当前流中的任意元素
+  `Optional<T>  findAny()` 返回当前流中的任意元素
 
-  `count()` 返回流中元素总数
+  `long count()` 返回流中元素总数
 
-  `max(Comparator c)` 返回流中最大值
+  `Optional<T> max(Comparator c)` 返回流中最大值
 
-  `min(Comparator c)` 返回流中最小值
+  `Optional<T> min(Comparator c)` 返回流中最小值
 
-  `forEach(Consumer c)`内部迭代(使用 Collection 接口需要用户去做迭代，称为外部迭代。相反，Stream API 使用内部迭代——它帮你把迭代做了)
+  `void forEach(Consumer c)`内部迭代(使用 Collection 接口需要用户去做迭代，称为外部迭代。相反，Stream API 使用内部迭代——它帮你把迭代做了)
 
 - **规约**
 
-  `reduce(T iden, BinaryOperator b)` 可以将流中元素反复结合起来，得到一个值。返回 T
+  `T reduce(T iden, BinaryOperator b)` 可以将流中元素反复结合起来，得到一个值。返回 T
 
-  `reduce(BinaryOperator b)` 可以将流中元素反复结合起来，得到一个值。返回Optional<T>
+  `Optional<T> reduce(BinaryOperator b)` 可以将流中元素反复结合起来，得到一个值。返回Optional<T>
 
   > 备注：map 和 reduce 的连接通常称为 map-reduce 模式，因 Google 用它来进行网络搜索而出名。
 
@@ -1017,6 +1053,8 @@ Java8 中的 Arrays 的静态方法 stream() 可以获取数组流：
   ![image-20200823221719214](JDK新特性.assets/image-20200823221719214.png)
 
 ![image-20200823221742773](JDK新特性.assets/image-20200823221742773.png)
+
+### 1.5.6练习
 
 
 
