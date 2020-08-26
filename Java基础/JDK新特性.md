@@ -1056,7 +1056,315 @@ public void test4(){
 
 ### 1.5.6练习
 
+```java
+package com.kong.stream;
 
+import org.junit.Test;
+
+import javax.xml.bind.Element;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class StreamTest {
+    List<Employee> employees=EmployeeData.getEmployees();
+    Stream<Employee> stream=employees.stream();
+    //1.筛选与切片
+    @Test
+    public void test1(){
+        //练习一：查询员工表中薪资大于7000的员工信息
+        stream.filter(e->e.getSalary()>7000)
+                .forEach(System.out::println);
+    }
+    @Test
+    public void test2(){
+        //练习二：获取前3条数据
+        stream.limit(3).forEach(System.out::println);
+    }
+    @Test
+    public void test3(){
+        //练习三：扔掉前三个数据，从第四个数据开始后获取
+        stream.skip(3).forEach(System.out::println);
+    }
+    @Test
+    public void test4(){
+        //练习四：去除重复数据
+        employees.add(new Employee(1010,"刘强东",40,8000));
+        employees.add(new Employee(1010,"刘强东",41,8000));
+        employees.add(new Employee(1010,"刘强东",40,8000));
+        employees.add(new Employee(1010,"刘强东",40,8000));
+        employees.add(new Employee(1010,"刘强东",40,8000));
+        stream.distinct().forEach(System.out::println);
+    }
+    //2.映射
+    @Test
+    public void mapTest(){
+        //map(Function f)——接收一个函数作为参数，将元素转换成其他形式或提取信息，
+        // 该函数会被应用到每个元素上，并将其映射成一个新的元素。
+        List<String> list= Arrays.asList("aa","bb","cc","dd");
+        list.stream().map(String::toUpperCase)
+                .forEach(System.out::println);
+
+        //将字符串中的多个字符构成的集合转换为对应的Stream的实例
+        //方式一：
+        List<String> strList= Arrays.asList("aa","bb","cc","dd");
+        strList.stream().map(StreamTest::stringToStream)
+                .forEach(s-> {
+                    s.forEach(System.out::println);
+                });
+
+        //flatMap(Function f)——接收一个函数作为参数，将流中的每个值都换成另一个流，
+        // 然后把所有流连接成一个流。
+        //方式二：
+        List<String> strList1= Arrays.asList("aa","bb","cc","dd");
+        strList1.stream().flatMap(StreamTest::stringToStream)
+                .forEach(System.out::println);
+    }
+    //将字符串中的多个字符构成的集合转换为对应的Stream的实例
+    public static Stream<Character> stringToStream(String str){
+        ArrayList<Character> strList=new ArrayList<>();
+        for (Character ch : str.toCharArray()){
+            strList.add(ch);
+        }
+        return strList.stream();
+    }
+
+    @Test
+    public void test5(){
+        //练习五：获取员工姓名长度大于3的员工的姓名。
+        stream.map(Employee::getName)
+                .filter(name->name.length()>3)
+                .forEach(System.out::println);
+    }
+    //3.排序
+    @Test
+    public void test6(){
+        //自然排序sorted()
+        //Employee必须实现Comparable接口，否则会抛异常
+        //按年龄从小到大
+        stream.sorted().forEach(System.out::println);
+
+        System.out.println("**********************************");
+
+        //定制排序sorted(Comparator com)
+        //按年龄从大到小，如果年龄相同，按工资从低到高
+        EmployeeData.getEmployees().stream()
+                .sorted((e1,e2)->{
+                    int ageValue=-Integer.compare(e1.getAge(),e2.getAge());
+                    if(ageValue==0){
+                        return Double.compare(e1.getSalary(),e2.getSalary());
+                    }else{
+                        return ageValue;
+                    }
+                }).forEach(System.out::println);
+    }
+    //4.匹配与查找
+    @Test
+    public void test7(){
+        //allMatch(Predicate p)——检查是否匹配所有元素。
+        //练习：是否所有的员工的年龄都大于18
+        boolean allMatch = EmployeeData.getEmployees().stream()
+                .allMatch(e -> e.getAge() > 18);
+        System.out.println(allMatch);
+
+        //anyMatch(Predicate p)——检查是否至少匹配一个元素。
+        //是否存在员工的工资大于10000
+        boolean anyMatch = EmployeeData.getEmployees().stream()
+                .anyMatch(e -> e.getSalary() > 10000);
+        System.out.println(anyMatch);
+
+        //noneMatch(Predicate p)——检查是否没有匹配的元素。
+        // 练习：是否存在员工姓“雷”      存在返回false,不存在返回true
+        boolean noneMatch = EmployeeData.getEmployees().stream()
+                .noneMatch(e -> e.getName().startsWith("雷"));
+        System.out.println(anyMatch);
+
+        //max(Comparator c)——返回流中最大值
+        //练习：返回最高的工资：
+        Stream<Double> salaryStream = EmployeeData.getEmployees()
+                .stream().map(e -> e.getSalary());
+        Optional<Double> maxSalary = salaryStream.max(Double::compare);
+        System.out.println(maxSalary);
+
+        //min(Comparator c)——返回流中最小值
+        //练习：返回最低工资的员工
+        Optional<Employee> employee = EmployeeData.getEmployees()
+                .stream().min((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()));
+        System.out.println(employee);
+        System.out.println();
+    }
+
+    //归约
+    @Test
+    public void test8(){
+        //reduce(T identity, BinaryOperator)——可以将流中元素反复结合起来，得到一个值。返回 T
+        //练习1：计算1-10的自然数的和
+        List<Integer> list=Arrays.asList(1,2,3,4,5,6,7,8,9);
+        Integer sum=list.stream().reduce(0,Integer::sum);
+        System.out.println(sum);  //45
+
+        //reduce(BinaryOperator) ——可以将流中元素反复结合起来，得到一个值。返回 Optional<T>
+        //练习2：计算公司所有员工工资的总和
+        List<Employee> employees = EmployeeData.getEmployees();
+        Optional<Double> sumMoney=employees.stream()
+                .map(Employee::getSalary)
+                .reduce(Double::sum);
+        System.out.println(sumMoney);
+    }
+
+    //收集
+    @Test
+    public void test9(){
+        //collect(Collector c)——将流转换为其他形式。
+        // 接收一个 Collector接口的实现，用于给Stream中元素做汇总的方法
+        //练习1：查找工资大于6000的员工，结果返回为一个List或Set
+        EmployeeData.getEmployees().stream()
+                .filter(e->e.getSalary()>6000)
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
+    }
+}
+
+```
+
+```java
+package com.kong.stream;
+
+public class Employee implements Comparable<Employee>{
+
+   private int id;
+   private String name;
+   private int age;
+   private double salary;
+
+   public int getId() {
+      return id;
+   }
+
+   public void setId(int id) {
+      this.id = id;
+   }
+
+   public String getName() {
+      return name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }
+
+   public int getAge() {
+      return age;
+   }
+
+   public void setAge(int age) {
+      this.age = age;
+   }
+
+   public double getSalary() {
+      return salary;
+   }
+
+   public void setSalary(double salary) {
+      this.salary = salary;
+   }
+
+   public Employee() {
+      System.out.println("Employee().....");
+   }
+
+   public Employee(int id) {
+      this.id = id;
+      System.out.println("Employee(int id).....");
+   }
+
+   public Employee(int id, String name) {
+      this.id = id;
+      this.name = name;
+   }
+
+   public Employee(int id, String name, int age, double salary) {
+
+      this.id = id;
+      this.name = name;
+      this.age = age;
+      this.salary = salary;
+   }
+
+   @Override
+   public String toString() {
+      return "Employee{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", salary=" + salary + '}';
+   }
+
+   @Override
+   public boolean equals(Object o) {
+      if (this == o)
+         return true;
+      if (o == null || getClass() != o.getClass())
+         return false;
+
+      Employee employee = (Employee) o;
+
+      if (id != employee.id)
+         return false;
+      if (age != employee.age)
+         return false;
+      if (Double.compare(employee.salary, salary) != 0)
+         return false;
+      return name != null ? name.equals(employee.name) : employee.name == null;
+   }
+
+   @Override
+   public int hashCode() {
+      int result;
+      long temp;
+      result = id;
+      result = 31 * result + (name != null ? name.hashCode() : 0);
+      result = 31 * result + age;
+      temp = Double.doubleToLongBits(salary);
+      result = 31 * result + (int) (temp ^ (temp >>> 32));
+      return result;
+   }
+
+   //根据年龄排序
+   @Override
+   public int compareTo(Employee o) {
+      return Integer.compare(this.age,o.age);
+   }
+}
+```
+
+```java
+package com.kong.stream;
+
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * 提供用于测试的数据
+ */
+public class EmployeeData {
+   
+   public static List<Employee> getEmployees(){
+      List<Employee> list = new ArrayList<>();
+      
+      list.add(new Employee(1001, "马化腾", 34, 6000.38));
+      list.add(new Employee(1002, "马云", 12, 9876.12));
+      list.add(new Employee(1003, "刘强东", 33, 3000.82));
+      list.add(new Employee(1004, "雷军", 26, 7657.37));
+      list.add(new Employee(1005, "李彦宏", 65, 5555.32));
+      list.add(new Employee(1006, "比尔盖茨", 42, 9500.43));
+      list.add(new Employee(1007, "任正非", 26, 4333.32));
+      list.add(new Employee(1008, "扎克伯格", 35, 2500.32));
+      
+      return list;
+   }
+   
+}
+```
 
 ## 1.6Optional类
+
+
+
+## 1.7接口的默认方法和静态方法
 
