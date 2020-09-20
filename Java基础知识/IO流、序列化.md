@@ -144,6 +144,10 @@ if (!file.exists()) { // 如果还不存在，就创建为文件
 
 **输出output**：将程序（内存）数据输出到磁盘、光盘等存储设备中
 
+- I/O流体系
+
+  ![image-20200920172608945](IO%E6%B5%81%E3%80%81%E5%BA%8F%E5%88%97%E5%8C%96.assets/image-20200920172608945.png)
+
 ## 2.2流的分类
 
 按操作**数据单位**不同分为：**字节流(8 bit)**，**字符流(16 bit)**
@@ -172,6 +176,8 @@ if (!file.exists()) { // 如果还不存在，就创建为文件
 
 # 3.节点流（或文件流）
 
+一切文件数据(文本、图片、视频等)在存储时，都是以二进制数字的形式保存，都一个一个的字节，那么传输时一样如此。所以，字节流可以传输任意文件数据。在操作流的时候，我们要时刻明确，无论使用什么样的流对象，底层传输的始终为二进制数据。
+
 ## 3.1字节输出流【OutputStream】
 
 `java.io.OutputStream `抽象类是表示字节输出流的所有类的超类，将指定的字节信息写出到目的地。它定义了字节输出流的基本共性功能方法。
@@ -195,7 +201,7 @@ if (!file.exists()) { // 如果还不存在，就创建为文件
 * `public FileOutputStream(File file)`：创建文件输出流以写入由指定的 File对象表示的文件。 
 * `public FileOutputStream(String name)`： 创建文件输出流以指定的名称写入文件。  
 
-当你创建一个流对象时，必须传入一个文件路径。该路径下，如果没有这个文件，会创建该文件。如果有这个文件，会清空这个文件的数据。
+当你创建一个流对象时，必须传入一个文件路径。**该路径下，如果没有这个文件，会创建该文件。如果有这个文件，会清空这个文件的数据。**
 
 * 构造举例，代码如下：
 
@@ -379,7 +385,7 @@ public class FileInputStreamConstructor throws IOException{
 }
 ```
 
-### 读取字节数据
+**读取字节数据**
 
 1. **读取字节**：`read`方法，每次可以读取一个字节的数据，提升为int类型，读取到文件末尾，返回`-1`，代码使用演示：
 
@@ -457,7 +463,7 @@ public class FISRead {
         // 定义字节数组，作为装字节数据的容器   
         byte[] b = new byte[2];
         // 循环读取
-        while (( len= fis.read(b))!=-1) {
+        while (len= fis.read(b))!=-1) {
            	// 每次读取后,把数组变成字符串打印
             System.out.println(new String(b));
         }
@@ -503,13 +509,13 @@ e
 >
 > 使用数组读取，每次读取多个字节，减少了系统间的IO操作次数，从而提高了读写的效率，建议开发中使用。
 
-## 2.6 字节流练习：图片复制
+**字节流练习：图片复制**
 
-### 复制原理图解
+复制原理图解：
 
 ![](IO流、序列化.assets/2_copy.jpg)
 
-### 案例实现
+**案例实现**
 
 复制图片文件，代码使用演示：
 
@@ -546,11 +552,15 @@ public class Copy {
 
 ## 3.3字符输入流【Reader】
 
-java.io.Reader`抽象类是表示用于读取字符流的所有类的超类，可以读取字符信息到内存中。它定义了字符输入流的基本共性功能方法。
+`java.io.Reader`抽象类是表示用于读取字符流的所有类的超类，可以读取字符信息到内存中。它定义了字符输入流的基本共性功能方法。
 
 - `public void close()` ：关闭此流并释放与此流相关联的任何系统资源。    
 - `public int read()`： 从输入流读取一个字符。 
-- `public int read(char[] cbuf)`： 从输入流中读取一些字符，并将它们存储到字符数组 cbuf中 。
+- `public int read(char[] cbuf)`： 从输入流中读取一些字符，并将它们存储到字符数组 cbuf中 。缓冲流,也叫高效流，是对4个基本的 FileXxx 流的增强，所以也是4个流，按照数据类型分类：
+  字节缓冲流： BufferedInputStream ， BufferedOutputStream
+  字符缓冲流： BufferedReader ， BufferedWriter
+  缓冲流的基本原理，是在创建流对象时，会创建一个内置的默认大小的缓冲区数组，通过缓冲区读写，减少系统IO
+  次数，从而提高读写的效率。
 
 ### 3.3.1 FileReader类  
 
@@ -842,9 +852,287 @@ public class FWWrite {
 
 # 4.缓冲流
 
+缓冲流,也叫高效流，是对4个基本的 FileXxx 流的增强，要“套接”在相应的节点流之上，根据数据操作单位可以把缓冲流分为：
+
+- 字节缓冲流： BufferedInputStream ， BufferedOutputStream
+- 字符缓冲流： BufferedReader ， BufferedWriter
+
+缓冲流的基本原理，是在创建流对象时，会创建一个内置的默认大小的缓冲区数组，缺省使用**8192个字节(8Kb)的缓冲区**。通过缓冲区读写，减少系统IO次数，从而提高读写的效率。
+
+![image-20200920193014713](IO%E6%B5%81%E3%80%81%E5%BA%8F%E5%88%97%E5%8C%96.assets/image-20200920193014713.png)
+
+**缓冲流读写方法与基本的流是一致的**
+
+> **注意事项：**
+>
+>  当读取数据时，数据按块读入缓冲区，其后的读操作则直接访问缓冲区
+>
+>  当使用BufferedInputStream读取字节文件时，**BufferedInputStream会一次性从文件中读取8192个(8Kb)，存在缓冲区中，直到缓冲区装满了，才重新从文件中读取下一个8192个字节数组。**
+>
+>  向流中写入字节时，不会直接写到文件，先写到缓冲区中直到缓冲区写满，BufferedOutputStream才会把缓冲区中的数据一次性写到文件里。**使用方法flush()可以强制将缓冲区的内容全部写入输出流**
+>
+>  关闭流的顺序和打开流的顺序相反。只要关闭最外层流即可，关闭最外层流也会相应关闭内层节点流
+>
+>  `flush()`方法的使用：手动将buffer中内容写入文件
+>
+>  如果是带缓冲区的流对象的`close()`方法，不但会关闭流，还会在关闭流之前刷新缓冲区，关闭后不能再写出
+
+## 4.1字节缓冲流 
+
+**构造方法：**
+
+- `public BufferedInputStream(InputStream in)` ：创建一个 新的缓冲输入流。
+- `public BufferedOutputStream(OutputStream out)` ： 创建一个新的缓冲输出流。
+
+**使用：**测试效率（使用基本流与使用缓冲流的执行效率）
+
+通过复制大文件（375MB），测试它的效率。
+
+```java
+1. 基本流，代码如下：
+public class BufferedDemo {
+    public static void main(String[] args) throws FileNotFoundException {
+        // 记录开始时间
+        long start = System.currentTimeMillis();
+        // 创建流对象
+        try (
+            FileInputStream fis = new FileInputStream("jdk9.exe");
+            FileOutputStream fos = new FileOutputStream("copy.exe")
+        ){
+        // 读写数据
+            int b;
+            while ((b = fis.read()) != ‐1) {
+            	fos.write(b);
+        	}
+        } catch (IOException e) {
+        	e.printStackTrace();
+        }
+        // 记录结束时间
+        long end = System.currentTimeMillis();
+        System.out.println("普通流复制时间:"+(end ‐ start)+" 毫秒");
+    }
+}
+十几分钟过去了...
+
+```
+
+```java
+2. 缓冲流，代码如下：
+public class BufferedDemo {
+    public static void main(String[] args) throws FileNotFoundException {
+        // 记录开始时间
+        long start = System.currentTimeMillis();
+        // 创建流对象
+        try (
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream("jdk9.exe"));
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("copy.exe"));
+        ){
+            // 读写数据
+            int b;
+            while ((b = bis.read()) != ‐1) {
+            	bos.write(b);
+            }
+        } catch (IOException e) {
+       	 	e.printStackTrace();
+        }
+        // 记录结束时间
+        long end = System.currentTimeMillis();
+        System.out.println("缓冲流复制时间:"+(end ‐ start)+" 毫秒");
+    }
+}
+缓冲流复制时间:8016 毫秒
+
+```
+
+```java
+3.使用数组的方式，代码如下：
+public class BufferedDemo {
+    public static void main(String[] args) throws FileNotFoundException {
+        // 记录开始时间
+        long start = System.currentTimeMillis();
+        // 创建流对象
+        try (
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream("jdk9.exe"));
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("copy.exe"));
+        ){
+            // 读写数据
+            int len;
+            byte[] bytes = new byte[8*1024];
+            while ((len = bis.read(bytes)) != ‐1) {
+            	bos.write(bytes, 0 , len);
+            }
+        } catch (IOException e) {
+        	e.printStackTrace();
+        }
+        // 记录结束时间
+        long end = System.currentTimeMillis();
+        System.out.println("缓冲流使用数组复制时间:"+(end ‐ start)+" 毫秒");
+    }
+}
+缓冲流使用数组复制时间:666 毫秒
+```
+
+## 4.2字符缓冲流
+
+**构造方法**
+
+- `public BufferedReader(Reader in)` ：创建一个新的缓冲输入流。
+- `public BufferedWriter(Writer out)` ： 创建一个新的缓冲输出流。
+
+**特有方法**
+字符缓冲流的基本方法与普通字符流调用方式一致，除此之外还有两个特有方法。
+
+- `BufferedReader： public String readLine()` : 一次读取字符文本文件的一行字符
+- `BufferedWriter： public void newLine()` : 写一行行分隔符,由系统属性定义符号。
+
+readLine 方法演示，代码如下：
+
+```java
+public class BufferedReaderDemo {
+    public static void main(String[] args) throws IOException {
+        // 创建流对象
+        BufferedReader br = new BufferedReader(new FileReader("in.txt"));
+        // 定义字符串,保存读取的一行文字
+        String line = null;
+        // 循环读取,读取到最后返回null
+        while ((line = br.readLine())!=null) {
+            System.out.print(line);
+            System.out.println("‐‐‐‐‐‐");
+        }
+        // 释放资源
+        br.close();
+    }
+}
+```
+
+newLine 方法演示，代码如下：
+
+```java
+public class BufferedWriterDemo throws IOException {
+    public static void main(String[] args) throws IOException {
+        // 创建流对象
+        BufferedWriter bw = new BufferedWriter(new FileWriter("out.txt"));
+        // 写出数据
+        bw.write("黑马");
+        // 写出换行
+        bw.newLine();
+        bw.write("程序");
+        bw.newLine();
+        bw.write("员");
+        bw.newLine();
+        // 释放资源
+        bw.close();
+    }
+}
+输出效果:
+黑马
+程序
+员
+```
+
 
 
 # 5.转换流
+
+- 转换流提供了在**字节流和字符流之间的转换**
+
+- Java API提供了两个转换流：
+  - **`InputStreamReader`：将InputStream转换为Reader**
+  - **`OutputStreamWriter`：将Writer转换为OutputStream**
+- 字节流中的数据都是字符时，转成字符流操作更高效。
+- 很多时候我们使用转换流来处理文件乱码问题。实现编码和解码的功能。
+
+## 5.1字符编码和字符集
+
+
+
+## 5.2InputStreamReader类
+
+转换流 java.io.InputStreamReader ，是Reader的子类，是从字节流到字符流的桥梁。它读取字节，并使用指定的字符集将其解码为字符。它的字符集可以由名称指定，也可以接受平台的默认字符集。
+**构造方法**
+
+- `InputStreamReader(InputStream in)` : 创建一个使用默认字符集的字符流。
+- `InputStreamReader(InputStream in, String charsetName)` : 创建一个指定字符集的字符流。
+
+构造举例，代码如下：
+
+```java
+InputStreamReader isr = new InputStreamReader(new FileInputStream("in.txt"));
+InputStreamReader isr2 = new InputStreamReader(new FileInputStream("in.txt") ,"GBK");
+```
+
+**指定编码读取**
+
+```java
+public class ReaderDemo2 {
+    public static void main(String[] args) throws IOException {
+        // 定义文件路径,文件为gbk编码
+        String FileName ="E:\\file_gbk.txt";
+        // 创建流对象,默认UTF8编码
+        InputStreamReader isr = new InputStreamReader(new FileInputStream(FileName));
+        // 创建流对象,指定GBK编码
+        InputStreamReader isr2 = new InputStreamReader(new FileInputStream(FileName) ,
+        "GBK");
+        // 定义变量,保存字符
+        int read;
+        
+        // 使用默认编码字符流读取,乱码
+        while ((read = isr.read()) != ‐1) {
+        	System.out.print((char)read); // ��Һ�
+        }
+        isr.close();
+        
+        // 使用指定编码字符流读取,正常解析
+        while ((read = isr2.read()) != ‐1) {
+        	System.out.print((char)read);// 大家好
+        }
+        isr2.close();
+    }
+}
+
+```
+
+## 5.3OutputStreamWriter类
+
+- 转换流 java.io.OutputStreamWriter ，是Writer的子类，是从字符流到字节流的桥梁。使用指定的字符集将字符
+  编码为字节。它的字符集可以由名称指定，也可以接受平台的默认字符集。
+
+**构造方法**
+
+- `OutputStreamWriter(OutputStream in)` : 创建一个使用默认字符集的字符流。
+- `OutputStreamWriter(OutputStream in, String charsetName)` : 创建一个指定字符集的字符流。
+
+构造举例，代码如下：
+
+```java
+OutputStreamWriter isr = new OutputStreamWriter(new FileOutputStream("out.txt"));
+OutputStreamWriter isr2 = new OutputStreamWriter(new FileOutputStream("out.txt") ,"GBK");
+
+```
+
+指定编码写出
+
+```java
+public class OutputDemo {
+    public static void main(String[] args) throws IOException {
+        // 定义文件路径
+        String FileName ="E:\\out.txt";
+        // 创建流对象,默认UTF8编码
+        OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(FileName));
+        // 写出数据
+        osw.write("你好"); // 保存为6个字节
+        osw.close();
+        // 定义文件路径
+        String FileName2 ="E:\\out2.txt";
+        // 创建流对象,指定GBK编码
+        OutputStreamWriter osw2 = new OutputStreamWriter(new FileOutputStream(FileName2),
+        "GBK");
+        // 写出数据
+        osw2.write("你好");// 保存为4个字节
+        osw2.close();
+    }
+}
+```
 
 
 
