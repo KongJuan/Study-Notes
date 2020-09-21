@@ -1142,6 +1142,47 @@ public class OutputDemo {
 
 # 7.打印流
 
+**实现将基本数据类型的数据格式转化为字符串输出**
+
+打印流：PrintStream和PrintWriter
+
+- 提供了一系列重载的print()和println()方法，用于多种数据类型的输出
+
+- PrintStream和PrintWriter的输出不会抛出IOException异常
+
+- PrintStream和PrintWriter有自动flush功能
+
+- PrintStream 打印的所有字符都使用平台的默认字符编码转换为字节。
+
+  在需要写入字符而不是写入字节的情况下，应该使用 PrintWriter 类。
+
+- System.out返回的是PrintStream的实例
+
+```java
+PrintStream ps = null;
+try {
+        FileOutputStream fos = new FileOutputStream(new File("D:\\IO\\text.txt"));
+        // 创建打印输出流,设置为自动刷新模式(写入换行符或字节 '\n' 时都会刷新输出缓冲区)
+        ps = new PrintStream(fos, true);
+        if (ps != null) {// 把标准输出流(控制台输出)改成文件
+        	System.setOut(ps);
+        }
+        for (int i = 0; i <= 255; i++) { // 输出ASCII字符
+            System.out.print((char) i);
+            if (i % 50 == 0) { // 每50个数据一行
+            	System.out.println(); // 换行
+            }
+        }
+} catch (FileNotFoundException e) {
+        e.printStackTrace();
+} finally {
+        if (ps != null) {
+        	ps.close();
+    	}
+}
+
+```
+
 
 
 # 8.数据流
@@ -1149,6 +1190,172 @@ public class OutputDemo {
 
 
 # 9.对象流
+
+## 9.1概述
+
+- ObjectInputStream和OjbectOutputSteam
+- 用于**存储和读取基本数据类型数据或对象**的处理流。它的强大之处就是可以把Java中的对象写入到数据源中，也能把对象从数据源中还原回来。
+- **序列化：用ObjectOutputStream类保存基本类型数据或对象的机制**
+-  **反序列化：用ObjectInputStream类读取基本类型数据或对象的机制**
+- **ObjectOutputStream和ObjectInputStream不能序列化static和transient修饰的成员变量**
+
+## 9.2 ObjectOutputStream类
+
+`java.io.ObjectOutputStream` 类，将Java对象的原始数据类型写出到文件,实现对象的持久存储。
+
+**构造方法**
+
+`public ObjectOutputStream(OutputStream out)` ： 创建一个指定OutputStream的ObjectOutputStream。
+构造举例，代码如下：
+
+```java
+FileOutputStream fileOut = new FileOutputStream("employee.txt");
+ObjectOutputStream out = new ObjectOutputStream(fileOut);
+```
+
+**序列化操作**
+
+1.序列化介绍
+
+- 对象序列化机制允许把内存中的Java对象转换成平台无关的二进制流，而允许把这种二进制流持久地保存在磁盘上，或通过网络将这种二进制流传输到另一个网络节点。当其它程序获取了这种二进制流，就可以恢复成原来的Java对象
+- 序列化的好处在于可将任何实现了Serializable接口的对象转化为字节数据，使其在保存和传输时可被还原
+- 序列化是 RMI（Remote Method Invoke – 远程方法调用）过程的参数和返回值都必须实现的机制，而 RMI 是JavaEE 的基础。因此序列化机制是JavaEE 平台的基础
+- 如果需要让某个对象支持序列化机制，则必须让对象所属的类及其属性是可序列化的，为了让某个类是可序列化的，该类必须实现如下两个接口之一。否则，会抛出`NotSerializableException`异常
+  - Serializable
+  - Externalizable
+
+- 凡是实现Serializable接口的类都有一个表示序列化版本标识符的静态变量：
+                    `private static final long serialVersionUID;`
+- serialVersionUID用来表明类的不同版本间的兼容性。简言之，其目的是以序列化对象进行版本控制，有关各版本反序列化时是否兼容。
+- 如果类没有显示定义这个静态常量，它的值是Java运行时环境根据类的内部细节自动生成的。若类的实例变量做了修改，serialVersionUID 可能发生变化。故建议，显式声明。
+- 简单来说，Java的序列化机制是通过在运行时判断类的serialVersionUID来验证版本一致性的。在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同就认为是一致的，可以进行反序列化，否则就会出现序列化版本不一致的异常。(InvalidCastException)
+
+> 一个对象要想序列化，必须满足两个条件:
+>
+> 1. 该类必须实现 java.io.Serializable 接口， Serializable 是一个标记接口，不实现此接口的类将不会使任
+>    何状态序列化或反序列化，会抛出 NotSerializableException 。
+> 2. 该类的所有属性必须是可序列化的。如果有一个属性不需要可序列化的，则该属性必须注明是瞬态的，使用transient 关键字修饰。
+
+```java
+public class Employee implements java.io.Serializable {
+    public String name;
+    public String address;
+    public transient int age; // transient瞬态修饰成员,不会被序列化
+    public void addressCheck() {
+   	 	System.out.println("Address check : " + name + "‐‐" + address);
+    }
+}
+
+```
+
+2.写出对象方法
+`public final void writeObject (Object obj)` : 将指定的对象写出。
+
+**使用对象流序列化对象**
+
+- 若某个类实现了 Serializable 接口，该类的对象就是可序列化的：
+- 创建一个 ObjectOutputStream调用 ObjectOutputStream 对象的 writeObject(对象) 方法输出可序列化对象
+- 注意写出一次，操作flush()一次
+
+```java
+public class SerializeDemo{
+    public static void main(String [] args) {
+        Employee e = new Employee();
+        e.name ="zhangsan";
+        e.address ="beiqinglu";
+        e.age = 20;
+        try {
+            // 创建序列化流对象
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("employee.txt"));
+            // 写出对象
+            out.writeObject(e);
+            // 释放资源
+            out.close();
+            fileOut.close();
+            System.out.println("Serialized data is saved"); // 姓名，地址被序列化，年龄没有被序列
+            化。
+        } catch(IOException i) {
+        	i.printStackTrace();
+        }
+    }
+}
+输出结果：
+Serialized data is saved
+
+```
+
+## 9.3 ObjectInputStream类
+
+ObjectInputStream反序列化流，将之前使用ObjectOutputStream序列化的原始数据恢复为对象。
+
+**构造方法**
+
+`public ObjectInputStream(InputStream in)` ： 创建一个指定InputStream的ObjectInputStream。
+
+**反序列化操作1**
+
+如果能找到一个对象的class文件，我们可以进行反序列化操作，调用 ObjectInputStream 读取对象的方法：
+                 `public final Object readObject ()` : 读取一个对象。
+
+```java
+public class DeserializeDemo {
+    public static void main(String [] args) {
+        Employee e = null;
+        try {
+            // 创建反序列化流
+            FileInputStream fileIn = new FileInputStream("employee.txt");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            // 读取一个对象
+            e = (Employee) in.readObject();
+            // 释放资源
+            in.close();
+            fileIn.close();
+        }catch(IOException i) {
+            // 捕获其他异常
+            i.printStackTrace();
+            return;
+        }catch(ClassNotFoundException c) {
+            // 捕获类找不到异常
+            System.out.println("Employee class not found");
+            c.printStackTrace();
+            return;
+        }
+        // 无异常,直接打印输出
+        System.out.println("Name: " + e.name); // zhangsan
+        System.out.println("Address: " + e.address); // beiqinglu
+        System.out.println("age: " + e.age); // 0
+    }
+}
+```
+
+对于JVM可以反序列化对象，它必须是能够找到class文件的类。如果找不到该类的class文件，则抛出一个
+`ClassNotFoundException` 异常。
+
+**反序列化操作2**
+
+另外，当JVM反序列化对象时，能找到class文件，但是class文件在序列化对象之后发生了修改，那么反序列化操
+作也会失败，抛出一个 InvalidClassException 异常。发生这个异常的原因如下：
+
+- 该类的序列版本号与从流中读取的类描述符的版本号不匹配
+- 该类包含未知数据类型
+- 该类没有可访问的无参数构造方法
+
+Serializable 接口给需要序列化的类，提供了一个序列版本号。 serialVersionUID 该版本号的目的在于验证序
+列化的对象和对应类是否版本匹配。
+
+```java
+public class Employee implements java.io.Serializable {
+    // 加入序列版本号
+    private static final long serialVersionUID = 1L;
+    public String name;
+    public String address;
+    // 添加新的属性 ,重新编译, 可以反序列化,该属性赋为默认值.
+    public int eid;
+    public void addressCheck() {
+    	System.out.println("Address check : " + name + "‐‐" + address);
+    }
+}
+```
 
 
 
