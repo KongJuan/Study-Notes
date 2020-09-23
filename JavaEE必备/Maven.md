@@ -454,3 +454,139 @@ mvn 阶段1 [阶段2] [阶段n]
 ### 聚合、继承、单继承问题
 
 https://mp.weixin.qq.com/s/-gp7Q9HWiP19ITunnwqdsw
+
+### 多模块构建
+
+https://mp.weixin.qq.com/s/h5kLk2RDBCj2onoghBEc8A
+
+#### 反应堆
+
+#### 按需随意构建
+
+### 多环境构建
+
+#### Maven属性
+
+maven属性前面我们有用到过，可以自定义一些属性进行重用，如下：
+
+```
+<properties>
+    <spring.verion>5.2.1.RELEASE</spring.verion>
+</properties>
+
+<dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.verion}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.verion}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aop</artifactId>
+        <version>${spring.verion}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.verion}</version>
+    </dependency>
+</dependencies>
+```
+
+可以看到上面依赖了4个spring相关的构建，他们的版本都是一样的，在`properties`元素中自定义了一个`spring.version`属性，值为spring的版本号，其他几个地方使用`${}`直接进行引用，这种方式好处还是比较明显的，升级spring版本的时候非常方便，只需要修改一个地方，方便维护。
+
+上面这个是maven自定义属性，需要先在`properties`中定义，然后才可以在其他地方使用`${属性元素名称}`进行引用。
+
+maven的属性主要分为2大类，第一类就是上面说的自定义属性，另外一类是不需要自定义的，可以直接拿来使用的。
+
+2类属性在pom.xml中都是采用`${属性名称}`进行引用，maven运行的时候会将`${}`替换为属性实际的值。
+
+下面我们来看一下maven中不需要自定义的5类属性。
+
+##### 内置属性
+
+```
+${basedir}：表示项目根目录，即包含pom.xml文件的目录
+${version}：表示项目的版本号
+```
+
+##### POM属性
+
+用户可以使用该属性引用pom.xml文件中对应元素的值，例如${project.artifactId}就可以取到`project->artifactId`元素的值，常用的有：
+
+```
+${pom.build.sourceDirectory}：项目的主源码目录，默认为src/main/java/
+${project.build.testSourceDirectory}：项目的测试源码目录，默认为src/test/java/
+${project.build.directory}：项目构建输出目录，默认为target/
+${project.build.outputDirectory}：项目主代码编译输出目录，默认为target/classes
+${project.build.testOutputDirectory}：项目测试代码编译输出目录，默认为target/test-classes
+${project.groupId}：项目的groupId
+${project.artifactId}：项目的artifactId
+${project.version}：项目的version，与${version}等价
+${project.build.finalName}：项目打包输出文件的名称，默认为${project.artifactId}-${project.version}
+```
+
+##### Settings属性
+
+这种属性以settings.开头来引用`~/.m2/settings.xml`中的内容，如:
+
+```
+${settings.localRepository}
+```
+
+指向用户本地仓库的地址。
+
+##### java系统属性
+
+所有java系统属性都可以使用maven属性来进行引用，例如`${user.home}`指向了当前用户目录。
+
+java系统属性可以通过`mvn help:system`命令看到。
+
+##### 环境变量属性
+
+所有的环境变量都可以使用env.开头的方式来进行引用，如：
+
+```
+${env.JAVA_HOME}
+```
+
+可以获取环境变量`JAVA_HOME`的值。
+
+用户可以使用`mvn help:system`命令查看所有环境变量的值。
+
+上面的maven属性，我们在`pom.xml`中通过`${属性名称}`可以灵活的引用，对我们写pom.xml文件帮助还是比较大的。
+
+#### 多环境构建问题
+
+https://mp.weixin.qq.com/s/wFj_ndNpz4AXF2WbdiGg3g
+
+#### 理解资源文件打包过程
+
+#### 设置资源文件内容动态替换
+
+#### 自定义替换的分隔符
+
+#### 指定需要替换的资源文件
+
+#### 使用profiles处理多环境构建问题
+
+##### 指定环境进行构建
+
+##### 开启默认环境配置
+
+##### 通过maven属性来控制环境的开启
+
+##### 启动的时候指定多个环境
+
+##### 查看目前有哪些环境
+
+##### 查看目前激活的是哪些环境
+
+#### 配置太分散了怎么办
+
+### 自定义Maven插件
