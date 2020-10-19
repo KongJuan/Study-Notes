@@ -7,9 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-test" />
-        <module name="mybatis-test" />
-        <module name="springmvc-test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
