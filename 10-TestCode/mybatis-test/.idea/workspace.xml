@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd94e54b-582f-4021-8b60-747b9aeb2774" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis-test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3-数据库/MySQL笔记.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3-数据库/MySQL笔记.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/1-JDBC核心技术.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/AJAX.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/DBUtils.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/EL表达式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/Filter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555575760234.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555575981203.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555576157618.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555576170074.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555576477107.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555579494691.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555579816884.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555580152530.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555580275036.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555580735377.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555580763636.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555580937490.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555581069798.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555586275271.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555593464033.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555593598606.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555595163263.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1555595198644.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1565969323908.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1566134718955.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1566134781682.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1566135290460.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1566136831283.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1566569819744.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1566573842140.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1566741430592.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/1566741692804.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/image-20200829222237732.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/image-20200829222343486.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/image-20200829222421287.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC核心技术.assets/image-20200829233626151.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JDBC笔记.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JSON.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JSP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/JSTL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/Listener.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/Servlet.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/tomcat.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575721407.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575760234.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575779249.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575941569.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575981203.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555576157618.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555576170074.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555576477107.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555579494691.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555579621478.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555579676078.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555579816884.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580152530.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580275036.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580735377.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580763636.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580937490.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580965019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555581069798.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555586275271.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555593464033.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555593497474.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555593598606.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555593632762.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555595163263.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555595198644.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1565969323908.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566134718955.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566134781682.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566135290460.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566136831283.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566569819744.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566573842140.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566726681515.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566741430592.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566741692804.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4-JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566745811244.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Git.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/JPA.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Mapper.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Maven.assets/image-20200921145546859.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Maven.assets/image-20200921151846732.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Maven.assets/image-20200921152031241.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Maven.assets/image-20200921152300473.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Maven.assets/image-20200921152326144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Maven.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Maven笔记.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Maven笔记.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Mybatis-Plus.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Mybatis.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Mybatis笔记.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Mybatis笔记.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/SVN.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Shiro.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Spring Data.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Spring.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/SpringBoot.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/SpringMVC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/SpringSecurity.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Spring笔记.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5-JavaEE必备/Spring笔记.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/ActiveMQ.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Docker.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Dubbo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Elastic-Job.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Elasticsearch.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Eureka.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/FastDFS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Jenkins.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Kafka.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Lucene.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Mycat.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Netty.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Nginx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Quartz.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/RocketMQ.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/ShardingSphere.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Skywalking.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Spring Cloud.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../6-JavaEE高级/Zookeeper.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test-code/spring-test/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test-code/spring-test/spring-test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test-code/spring-test/src/main/java/com/kong/aop/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test-code/spring-test/src/main/java/com/kong/aop/test/AopTest01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test-code/springmvc-test/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test-code/springmvc-test/springmvc-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Git.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/JPA.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Mapper.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Maven.assets/image-20200921145546859.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Maven.assets/image-20200921151846732.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Maven.assets/image-20200921152031241.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Maven.assets/image-20200921152300473.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Maven.assets/image-20200921152326144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Maven.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Mybatis-Plus.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Mybatis.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/SVN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Shiro.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Spring Data.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/Spring.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/SpringBoot.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/SpringMVC.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE必备/SpringSecurity.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/ActiveMQ.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Docker.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Dubbo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Elastic-Job.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Elasticsearch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Eureka.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/FastDFS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Jenkins.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Kafka.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Lucene.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Mycat.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Netty.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Nginx.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Quartz.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/RocketMQ.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/ShardingSphere.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Skywalking.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Spring Cloud.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaEE高级/Zookeeper.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/1-JDBC核心技术.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/AJAX.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/DBUtils.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/EL表达式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/Filter.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555575760234.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555575981203.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555576157618.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555576170074.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555576477107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555579494691.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555579816884.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555580152530.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555580275036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555580735377.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555580763636.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555580937490.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555581069798.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555586275271.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555593464033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555593598606.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555595163263.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1555595198644.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1565969323908.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1566134718955.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1566134781682.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1566135290460.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1566136831283.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1566569819744.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1566573842140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1566741430592.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/1566741692804.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/image-20200829222237732.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/image-20200829222343486.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/image-20200829222421287.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC核心技术.assets/image-20200829233626151.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JDBC笔记.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JSON.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JSP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/JSTL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/Listener.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/Servlet.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/tomcat.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575721407.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575760234.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575779249.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575941569.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555575981203.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555576157618.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555576170074.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555576477107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555579494691.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555579621478.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555579676078.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555579816884.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580152530.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580275036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580735377.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580763636.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580937490.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555580965019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555581069798.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555586275271.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555593464033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555593497474.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555593598606.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555593632762.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555595163263.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1555595198644.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1565969323908.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566134718955.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566134781682.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566135290460.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566136831283.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566569819744.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566573842140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566726681515.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566741430592.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566741692804.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWeb基础知识/尚硅谷_宋红康_JDBC.assets/1566745811244.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.assets/2_copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.assets/image-20200811214847671.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.assets/image-20200812212440283.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.assets/image-20200812212638391.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.assets/image-20200812212831253.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.assets/image-20200920172608945.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.assets/image-20200920193014713.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.assets/image-20200921221639644.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.assets/image-20200921221703110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/IO流、序列化.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/JDK新特性.assets/image-20200820105414496.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/JDK新特性.assets/image-20200820165433207.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/JDK新特性.assets/image-20200820165503460.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/JDK新特性.assets/image-20200820165948610.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/JDK新特性.assets/image-20200823221719214.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/JDK新特性.assets/image-20200823221742773.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/JDK新特性.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/JUC.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/JVM.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/Java设计模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/Linux.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/NIO.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/06_文件上传案例的多线程版本.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/1_cs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/2_bs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/3_tcp_ip.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/4_tcp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/5_简单通信.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/6_upload.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/6_upload2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/7_firefox.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/8_ie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/BS通信.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/UDP通信图解.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/复制.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/字符串拼接问题.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/效果图1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/效果图2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/无法访问.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/img/读取访问信息.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/java基础.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/java面向对象.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/代理模式.assets/170fb22212d284cf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/代理模式.assets/image-20200714211258914.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/代理模式.assets/image-20200818164523996.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/代理模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718153559006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718214620963.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718220713211.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718221221288.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718221255467.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718223326341.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718224531423.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718233346109.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718233512611.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718233637408.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718233713788.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200718233836965.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719162143445.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719162720294.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719164214974.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719171337014.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719172358726.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719172557524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719174648384.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719185252927.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719215045416.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719215136766.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719215424879.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200719222717204.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720210008911.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720212122871.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720213304798.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720213446371.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720214601198.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720214756656.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720214937207.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720215043254.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720215231417.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720230502877.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200720230553343.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.assets/image-20200728113742710.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/多线程.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200723214447605.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200723223228136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200723223708810.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200724214737819.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200724221237171.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200724223709448.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200725212548392.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200725212726903.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200725213042222.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200725213148955.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200725213241464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200725213901548.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200725220435519.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200725220912466.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200725221501592.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200726143133689.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200726152955753.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200726161844999.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200726163036715.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200726174723497.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200727213919966.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200727213951424.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200727214625361.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.assets/image-20200729210728805.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/常用API.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/异常.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/169eda58cb97c616" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/16c52dcd4957b070" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzk0NDM2NS02YWU4YWJiMjVmNmMwMzliLnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwJTdDaW1hZ2VWaWV3Mi8yL3cvMTI0MA.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzk0NDM2NS05OTU2NjdiOGM1NDIyZTdjLnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwJTdDaW1hZ2VWaWV3Mi8yL3cvMTI0MA.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzk0NDM2NS1jMmQ3NzM2NzQ5ZWQ5NmE3LnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwJTdDaW1hZ2VWaWV3Mi8yL3cvMTI0MA.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200712181255192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200713203940137.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200713204101621.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200713204243665.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200713210452020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200713220451665.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200713220648793.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200714160041469.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200714162237524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200714162403290.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.assets/image-20200714162532131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200712181255192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200713203940137.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200713204101621.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200713204243665.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200713210452020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200713220451665.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200713220648793.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200713220917214.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200713221631402.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200714160041469.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200714162237524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200714162403290.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/注解、反射、序列化.assets/image-20200714162532131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/1_cs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/2_bs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/3_tcp_ip.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/4_tcp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/5_简单通信.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/6_upload.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/6_upload2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/BS通信.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/UDP通信图解.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/复制.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/效果图1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/效果图2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/无法访问.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.assets/读取访问信息.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/网络编程.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200801184604328.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200801201436214.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200801210239897.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200806202248658.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200806202959381.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200806203855378.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200807114133214.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200807142434311-1596782670931.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200807142434311.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200807144949009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200807145040925.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.assets/image-20200807155119614.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合、泛型.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/HashMap的put().png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java7集合框架/深入Java集合1：HashMap的实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java7集合框架/深入Java集合2：HashSet的实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java7集合框架/深入Java集合3：ArrayList实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java7集合框架/深入Java集合4：LinkedHashMap的实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java7集合框架/深入Java集合5：LinkedHashSet的实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java8集合框架/深入java8的集合1：ArrayList的实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java8集合框架/深入java8的集合2：LinkedList的实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java8集合框架/深入java8的集合3：HashMap的实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java8集合框架/深入java8的集合4：LinkedHashMap的实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/Java8集合框架/深入java8的集合5：Hashtable的实现原理.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础知识/集合的底层实现/深入分析HashMap.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端技术/Vue.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../面试必知必问/java基础.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1iuzice5Y8uw8dNX3yxtJmJuUYo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3938706" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd94e54b-582f-4021-8b60-747b9aeb2774" name="Default Changelist" comment="" />
+      <created>1602772392734</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602772392734</updated>
+      <workItem from="1602772396024" duration="631000" />
+      <workItem from="1602848112600" duration="3767000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="696" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1602850691667">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="696" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1602850691667" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1602848217819">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602848217819" />
+    <state x="178" y="73" key="new project wizard" timestamp="1602848213287">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1602848213287" />
+  </component>
+</project>
