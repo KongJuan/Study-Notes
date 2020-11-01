@@ -1,7 +1,6 @@
 package com.kong.test;
 
 import com.kong.demo1.HelloWorld;
-import com.kong.demo2.UserModel;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -34,6 +33,25 @@ public class IocTest01 {
             String[] aliases=context.getAliases(beanName);
             System.out.println(String.format("beanName:%s,别名:[%s]", beanName, String.join(",", aliases)));
         }
+    }
+    @Test
+    public void test03(){
+        ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("beans3.xml");
+        for(String beanName:context.getBeanDefinitionNames()){
+            System.out.println(beanName + ":" + context.getBean(beanName));
+        }
+    }
+
+    @Test
+    public void test04(){
+        ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("beans3.xml");
+        for(String beanName:context.getBeanDefinitionNames()){
+            System.out.println(beanName + ":" + context.getBean(beanName));
+        }
+        System.out.println(" --------------------------");
+        //多次获取createByFactoryBean看看是否是同一个对象
+        System.out.println("userModel5:" +context.getBean("userModel5"));
+        System.out.println("userModel5:" +context.getBean("userModel5"));
     }
 
 }
