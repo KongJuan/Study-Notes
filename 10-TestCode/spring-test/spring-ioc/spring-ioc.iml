@@ -25,61 +25,61 @@
     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project"/>  
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project"/>  
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.2.3.RELEASE" level="project"/>  
-    <orderEntry type="module-library">
-      <library>
+    <orderEntry type="module-library"> 
+      <library> 
         <CLASSES>
           <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-beans/5.2.3.RELEASE/spring-beans-5.2.3.RELEASE.jar!/"/>
         </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
         <CLASSES>
           <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-core/5.2.3.RELEASE/spring-core-5.2.3.RELEASE.jar!/"/>
         </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
         <CLASSES>
           <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-jcl/5.2.3.RELEASE/spring-jcl-5.2.3.RELEASE.jar!/"/>
         </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
         <CLASSES>
           <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-context/5.2.3.RELEASE/spring-context-5.2.3.RELEASE.jar!/"/>
         </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
         <CLASSES>
           <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-aop/5.2.3.RELEASE/spring-aop-5.2.3.RELEASE.jar!/"/>
         </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
         <CLASSES>
           <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-expression/5.2.3.RELEASE/spring-expression-5.2.3.RELEASE.jar!/"/>
         </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
         <CLASSES>
           <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/junit/junit/4.12/junit-4.12.jar!/"/>
         </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library"> 
+      <library> 
         <CLASSES>
           <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/"/>
         </CLASSES>
-      </library>
-    </orderEntry>
+      </library> 
+    </orderEntry> 
   </component> 
 </module>

@@ -17,9 +17,9 @@ public class HelloController {
         return "showData";
     }
 
-    @RequestMapping("/modelandview")
+    @RequestMapping("/show")
     public ModelAndView result(){
-        ModelAndView mv=new ModelAndView();
+        ModelAndView mv=new ModelAndView("index");
         mv.addObject("time",new Date());
         mv.getModel().put("name","haha");
         return mv;
