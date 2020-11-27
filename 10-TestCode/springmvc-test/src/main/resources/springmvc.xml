@@ -21,7 +21,7 @@
     <!--配置三大组件之视图解析器-->
     <!-- InternalResourceViewResolver:默认支持JSP视图解析-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="prefix" value="/WEB-INF/pages/" />
         <property name="suffix" value=".jsp" />
     </bean>
 </beans>
