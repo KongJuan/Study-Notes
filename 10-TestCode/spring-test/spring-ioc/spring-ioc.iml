@@ -11,11 +11,16 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+>>>>>>> kongjuan
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.2.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.3.RELEASE" level="project" />
@@ -28,6 +33,12 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../../../apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-beans/5.2.3.RELEASE/spring-beans-5.2.3.RELEASE.jar!/" />
+=======
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-beans/5.2.3.RELEASE/spring-beans-5.2.3.RELEASE.jar!/" />
+>>>>>>> kongjuan
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -36,7 +47,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+<<<<<<< HEAD
           <root url="jar://$MODULE_DIR$/../../../../apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-core/5.2.3.RELEASE/spring-core-5.2.3.RELEASE.jar!/" />
+=======
+          <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-core/5.2.3.RELEASE/spring-core-5.2.3.RELEASE.jar!/" />
+>>>>>>> kongjuan
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -45,7 +60,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+<<<<<<< HEAD
           <root url="jar://$MODULE_DIR$/../../../../apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-jcl/5.2.3.RELEASE/spring-jcl-5.2.3.RELEASE.jar!/" />
+=======
+          <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-jcl/5.2.3.RELEASE/spring-jcl-5.2.3.RELEASE.jar!/" />
+>>>>>>> kongjuan
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -54,7 +73,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+<<<<<<< HEAD
           <root url="jar://$MODULE_DIR$/../../../../apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-context/5.2.3.RELEASE/spring-context-5.2.3.RELEASE.jar!/" />
+=======
+          <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-context/5.2.3.RELEASE/spring-context-5.2.3.RELEASE.jar!/" />
+>>>>>>> kongjuan
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -63,7 +86,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+<<<<<<< HEAD
           <root url="jar://$MODULE_DIR$/../../../../apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-aop/5.2.3.RELEASE/spring-aop-5.2.3.RELEASE.jar!/" />
+=======
+          <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-aop/5.2.3.RELEASE/spring-aop-5.2.3.RELEASE.jar!/" />
+>>>>>>> kongjuan
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -72,7 +99,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+<<<<<<< HEAD
           <root url="jar://$MODULE_DIR$/../../../../apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-expression/5.2.3.RELEASE/spring-expression-5.2.3.RELEASE.jar!/" />
+=======
+          <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/springframework/spring-expression/5.2.3.RELEASE/spring-expression-5.2.3.RELEASE.jar!/" />
+>>>>>>> kongjuan
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -81,7 +112,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+<<<<<<< HEAD
           <root url="jar://$MODULE_DIR$/../../../../apache-maven-3.6.3/LocalWarehouse/junit/junit/4.12/junit-4.12.jar!/" />
+=======
+          <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/junit/junit/4.12/junit-4.12.jar!/" />
+>>>>>>> kongjuan
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -90,11 +125,26 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+<<<<<<< HEAD
           <root url="jar://$MODULE_DIR$/../../../../apache-maven-3.6.3/LocalWarehouse/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
+=======
+          <root url="jar://F:/apache-maven-3.6.3/LocalWarehouse/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
+>>>>>>> kongjuan
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:5.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.2.3.RELEASE" level="project" />
+>>>>>>> kongjuan
   </component>
 </module>
