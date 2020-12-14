@@ -1,4 +1,8 @@
-## 一、SpringMVC入门程序
+## 一、SpringMVC介绍
+
+
+
+## 二、SpringMVC入门程序
 
 工具：idea2020.1.2
 
@@ -145,12 +149,12 @@ public class HelloController {
 ![image-20201128165614963](SpringMVC.assets/image-20201128165614963.png)
 
 1. 当启动Tomcat服务器的时候，因为配置了load-on-startup标签，所以会创建DispatcherServlet对象，
-  就会加载springmvc.xml配置文件
+    就会加载springmvc.xml配置文件
 
 2. 开启了注解扫描，那么HelloController对象就会被创建
 
 3. 从index.jsp发送请求，请求会先到达DispatcherServlet核心控制器，根据配置@RequestMapping注解
-  找到执行的具体方法
+    找到执行的具体方法
 
 4. 根据执行方法的返回值，再根据配置的视图解析器，去指定的目录下查找指定名称的JSP文件
 
@@ -367,7 +371,7 @@ public ModelAndView modelAndViewTest(){
 }
 
 success.jsp界面
-//首先将isELIgnored="false"才能时el表达式的值不被忽略
+//首先将isELIgnored="false"才能使el表达式的值不被忽略
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
@@ -407,6 +411,8 @@ success.jsp界面
        >       将响应体的Content-Type设置为text/plain；charset=utf-8
        >       调用response.getWriter()方法将String类型的字符串写回给调用者。
 
+
+
 ## 四、参数绑定处理
 
 **什么是参数绑定**
@@ -429,7 +435,7 @@ success.jsp界面
 **请求参数值的数据类型**
 
 ```
-默认是key/value格式，比如： http://XXXXX?id=1&type=301
+都是String类型的各种值
 ```
 
 **请求参数值要绑定的目标类**
@@ -438,11 +444,39 @@ success.jsp界面
 Controller类中的方法参数，比如简单类型、String类型、POJO类型、集合类型等。
 ```
 
-1、基本数据类型和字符串类型
+1、简单类型
 
-​             提交表单的name和参数的名称是相同的
+- 直接绑定
 
-​             区分大小写
+  ​      http请求参数的【key】和controller方法的【形参名称】一致 
+
+- 基本数据类型和字符串类型
+
+  ​      提交表单的name和参数的名称是相同的
+
+  ​      区分大小写
+
+- 注解绑定
+
+  ​      请求参数的【key】和controller方法的【形参名称】不一致时，需要使用【@RequestParam】注解才能
+
+  将请求参数绑定成功。
+
+  > RequestParam注解
+  >
+  > - value
+  >
+  >   参数名字，即入参的请求参数名字，如value=“itemid”表示请求的参数中的名字为itemid的参数的值将传 入
+  >
+  > - required
+  >
+  >   是否必须，默认是true，表示请求中一定要有相应的参数，否则将报； TTP Status 400 - Required Integer parameter 'XXXX' is not present 
+  >
+  > - defaultValue
+  >
+  >   默认值，表示如果请求中没有同名参数时的默认值 
+
+
 
 2、实体类型（JavaBean）
 
@@ -452,9 +486,17 @@ Controller类中的方法参数，比如简单类型、String类型、POJO类型
 
 3、给集合属性数据封装
 
-​              JSP页面编写方式：list[0].属性
+​              JSP页面编写方式：list[0].属性、map(key).value
 
-4、默认支持的参数类型
+- 简单类型数组
+
+  ​     通过HTTP请求批量传递简单类型数据的情况，Controller方法中可以用String[]或者pojo的String[] 属性接         收（两种方式任选其一），但是不能使用List集合接收。 
+
+- POJO类型集合或者数组
+
+  ​     批量传递的请求参数，最终要使用List<POJO>来接收，那么这个List<POJO>必须放在另一个POJO类中。 
+
+4、默认支持的**ServletAPI**参数类型
 
 Controller方法形参中可以随时添加如下类型的参数（Servlet API支持），处理适配器会自动识别并进行赋值
 
@@ -484,4 +526,16 @@ model.addAttribute("msg",“测试springmvc”);
 ```
 默认内置了24种参数解析组件（ArgumentResolver）
 ```
+
+
+
+**自定义日期参数绑定**
+
+​        对于springmvc无法解析的参数绑定类型，比如[年月日时分秒格式的日期]绑定到Date类型会报错，此时需 
+
+要自定义[参数转换器]进行参数绑定。 
+
+**文件类型参数绑定**
+
+## 五、RESTful支持
 
