@@ -3,7 +3,6 @@
 <body>
 <h3>入门案例</h3>
 <a href="hello">入门案例</a><br>
-
 <!-- request请求的内容类型主要分为：K/V类型、Multipart类型、JSON类型 -->
 <!-- 将request请求参数，绑定到简单类型（基本类型和String类型）方法参数 -->
 <!-- 直接绑定 -->

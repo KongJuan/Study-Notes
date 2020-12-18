@@ -82,20 +82,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3662547-703e-4cd1-af09-c034228aef9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvc-test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kj/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kj/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kj/pojo/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kj/pojo/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kj/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5-JavaEE必备/SpringMVC/SpringMVC.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../5-JavaEE必备/SpringMVC/SpringMVC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6-JavaEE高级/RocketMQ.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,6 +290,9 @@
       <option name="presentableId" value="Default" />
       <updated>1607932471887</updated>
       <workItem from="1607932477048" duration="5464000" />
+      <workItem from="1607993186714" duration="1248000" />
+      <workItem from="1608171714599" duration="1875000" />
+      <workItem from="1608277393387" duration="728000" />
     </task>
     <servers />
   </component>
@@ -317,6 +309,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="733" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607934051532">
