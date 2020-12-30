@@ -17,5 +17,10 @@
     所属城市：<input type="text" name="address.cityName"><br />
     <input type="submit" value="保存">
 </form>
+
+<!-- 将request请求参数，绑定到[元素是简单类型的集合或数组]参数 -->
+<!-- 使用数组接收 -->
+<a href="${pageContext.request.contextPath}/user/findUserByIds/?id=1&id=3">根据ID批量删除用户</a>
+
 </body>
 </html>

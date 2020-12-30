@@ -30,4 +30,9 @@ public class UserController {
         model.addAttribute("msg", "接收到的参数："+user.toString());
         return "success";
     }
+    @RequestMapping("findUserByIds")
+    public String findUserByIds(Integer[] id,Model model){
+        model.addAttribute("msg", "接收到的参数："+id);
+        return "success";
+    }
 }
