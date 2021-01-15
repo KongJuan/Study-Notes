@@ -529,15 +529,299 @@ model.addAttribute("msg",“测试springmvc”);
 
 **参数绑定案例**
 
+```java
+//实体类
+package com.kj.pojo;
 
+import java.util.*;
+
+public class User {
+    private int id;
+    private String username;
+    private Date birthday;
+    private String sex;
+
+    // 演示包装POJO参数绑定
+    private Address address;
+    // 演示批量简单类型参数接收
+    private List<Integer> uid = new ArrayList<>();
+    //将request请求参数，绑定到[元素是POJO类型的List集合]参数
+    private List<Item> itemList = new ArrayList<>();
+    // 将request请求参数，绑定到[元素是POJO类型的Map集合]参数
+    private Map<String, Item> itemMap = new HashMap<>();
+
+    //。。。。。。
+}
+
+```
+
+```java
+package com.kj.pojo;
+
+public class Address {
+    private String provinceName;
+    private String cityName;
+    
+    //。。。。。。
+
+}
+
+```
+
+```Java
+package com.kj.pojo;
+
+public class Item {
+    private String name;
+    private double price;
+
+    //。。。。。。
+}
+
+```
+
+
+
+```jsp
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<html>
+<body>
+<h3>入门案例</h3>
+<a href="hello">入门案例</a><br>
+<!-- request请求的内容类型主要分为：K/V类型、Multipart类型、JSON类型 -->
+<!-- 将request请求参数，绑定到简单类型（基本类型和String类型）方法参数 -->
+
+<!-- 1、直接绑定 -->
+<a href="${pageContext.request.contextPath}/user/findUserById?id=1">查询用户1</a><br>
+
+<!-- 2、@RequestParam注解绑定 -->
+<a href="${pageContext.request.contextPath}/user/findUserById2?uid=1">查询用户2</a><br>
+
+<!-- 3、将request请求参数，绑定到POJO类型(简单POJO和包装POJO的)方法参数 -->
+<form action="${pageContext.request.contextPath}/user/saveUser" method="post">
+    用户名称：<input type="text" name="username"><br />
+    用户性别：<input type="text" name="sex"><br />
+    所属省份：<input type="text" name="address.provinceName"><br />
+    所属城市：<input type="text" name="address.cityName"><br />
+    <input type="submit" value="保存">
+</form>
+
+<!-- 将request请求参数，绑定到[元素是简单类型的集合或数组]参数 -->
+<!-- 使用数组接收 -->
+<a href="${pageContext.request.contextPath}/user/findUserByIds/?id=1&id=3">根据ID批量删除用户</a>
+<!--使用List接收（错误示例）
+    Request processing failed; nested exception is java.lang.IllegalStateException: No primary or default constructor found for interface java.util.List-->
+<a href="${pageContext.request.contextPath}/user/findUserByIds2?id=1&id=3">根据ID批量删除用户</a>
+<!--使用Bean的List接收-->
+<a href="${pageContext.request.contextPath}/user/findUserByIds3?uid=1&uid=3">根据ID批量删除用户</a>
+
+<!-- 将request请求参数，绑定到[元素是POJO类型的List集合或Map集合]参数 -->
+<form action="${pageContext.request.contextPath}/user/updateUser" method="post">
+    用户名称：<input type="text" name="username"><br />
+    用户性别：<input type="text" name="sex"><br />
+    <!-- itemList[集合下标]：集合下标必须从0开始 -->
+    <!-- 辅助理解：先将name属性封装到一个Item对象中，再将该Item对象放入itemList集合的 指定下标处 -->
+    购买商品1名称：<input type="text" name="itemList[0].name"><br />
+    购买商品1价格：<input type="text" name="itemList[0].price"><br />
+    购买商品2名称：<input type="text" name="itemList[1].name"><br />
+    购买商品2价格：<input type="text" name="itemList[1].price"><br />
+    <!-- itemMap['item3']：其中的item3、item4就是Map集合的key -->
+    <!-- 辅助理解：先将name属性封装到一个Item对象中，再将该Item对象作为value放入 itemMap集合的指定key处 -->
+    购买商品3名称：<input type="text" name="itemMap['item3'].name"><br />
+    购买商品3价格：<input type="text" name="itemMap['item3'].price"><br />
+    购买商品4名称：<input type="text" name="itemMap['item4'].name"><br />
+    购买商品4价格：<input type="text" name="itemMap['item4'].price"><br />
+    <input type="submit" value="保存"> </form>
+</body>
+</html>
+
+```
+
+```Java
+@RequestMapping("user")
+@Controller
+public class UserController {
+
+    @RequestMapping("findUserById")
+    public String findUserById(Integer id, Model model, HttpServletRequest request){
+        model.addAttribute("msg", "直接参数绑定接收到的参数："+id);
+        //model.addAttribute("msg", "通过Request getParameter参数接收到的参 数："+request.getParameter("id"));
+        return "success";
+    }
+
+    @RequestMapping("findUserById2")
+    public String findUserById2(@RequestParam("uid") Integer id, Model model) {
+        model.addAttribute("msg", "@RequestParam注解绑定："+id);
+        return "success";
+    }
+
+    @RequestMapping("saveUser")
+    public String saveUser(User user, Model model)
+    {
+        model.addAttribute("msg", "将request请求参数，绑定到POJO类型(简单POJO和包装POJO的)方法参数："+user.toString());
+        return "success";
+    }
+    @RequestMapping("findUserByIds")
+    public String findUserByIds(int[] id,Model model){
+        model.addAttribute("msg", "将request请求参数，绑定到数组参数："+id[1]);
+        return "success";
+    }
+
+    //报错
+    //Request processing failed; nested exception is java.lang.IllegalStateException: No primary or default constructor found for interface java.util.List
+    @RequestMapping("findUserByIds2")
+    public String findUserByIds2(List<Integer> id,Model model){
+        model.addAttribute("msg","将request请求参数，绑定到集合参数："+id);
+        return "success";
+    }
+
+    @RequestMapping("findUserByIds3")
+    public String findUserByIds3(User user,Model model){
+        model.addAttribute("msg","将request请求参数，绑定到对象的List参数:"+user.getUid());
+        return "success";
+    }
+
+    @RequestMapping("updateUser")
+    public String updateUser(User user,Model model){
+        model.addAttribute("msg","将request请求参数，绑定到[元素是POJO类型的List集合或Map集合]参数"+user);
+        return "success";
+    }
+}
+
+```
 
 **自定义日期参数绑定**
 
 ​        对于springmvc无法解析的参数绑定类型，比如[年月日时分秒格式的日期]绑定到Date类型会报错，此时需要自定义[参数转换器]进行参数绑定。 
 
+```jsp
+<!-- 将request请求参数，绑定到Date类型方法参数 -->
+<!-- 请求参数是：【年月日】 格式 -->
+<a href="${pageContext.request.contextPath}/user/deleteUser?birthday=2018- 01-01">根据日期删除用户(String)</a>
+<!-- 请求参数是：【年月日 时分秒】 格式 -->
+<a href="${pageContext.request.contextPath}/user/deleteUser2?birthday=2018- 01-01 12:10:33">根据日期删除用户(Date)</a>
+```
 
+```java
+//自定义[参数转换器]进行参数绑定
+package com.kj.utils;
+import org.springframework.core.convert.converter.Converter;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateConverter implements Converter<String, Date> {
+
+    @Override
+    public Date convert(String s) {
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            return simpleDateFormat.parse(s);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+}
+
+```
+
+```xml
+<!-- Converter配置 -->
+<!-- 加载注解驱动 -->
+    <mvc:annotation-driven conversion-service="conversionService"/>
+    <!-- 转换器配置 -->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean ">
+        <property name="converters">
+            <set>
+                <bean class="com.kj.utils.DateConverter"/>
+            </set>
+        </property>
+    </bean>
+```
+
+```java
+    @RequestMapping("deleteUser")
+    public String deleteUser(User user,Model model){
+        model.addAttribute("msg","请求参数是：【年月日】 格式 :"+user.getBirthday());
+        return "success";
+    }
+    @RequestMapping("deleteUser2")
+    public String deleteUser2(User user,Model model){
+        model.addAttribute("msg","请求参数是：【年月日 时分秒】 格式:"+user.getBirthday());
+        return "success";
+    }
+```
 
 **文件类型参数绑定**
+
+SpringMVC 文件上传的实现，是由 commons-fileupload 这个第三方jar包实现的。
+
+**导入依赖包**
+
+```java
+<dependency> 
+    <groupId>commons-fileupload</groupId> 
+    <artifactId>commons-fileupload</artifactId> 
+    <version>1.3.1</version> 
+</dependency>
+```
+
+**上传页面**
+
+```jsp
+<!-- 文件类型参数绑定 JSP中的form表单需要指定enctype=”multipart/form-data” -->
+<form action="${pageContext.request.contextPath}/user/fileupload" method="post" enctype="multipart/form-data">
+    图片：<input type="file" name="uploadFile" /><br />
+    <input type="submit" value="上传" />
+</form>
+```
+
+**配置Multipart解析器**
+
+在 springmvc.xml 中配置 multipart 类型解析器：
+
+```java
+<!-- multipart类型解析器，文件上传 --> 
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+<!-- 上传文件的最大尺寸 5M--> 
+    <property name="maxUploadSize" value="5242880"/>
+</bean>
+```
+
+**Controller类代码**
+
+```java
+@RequestMapping("fileupload")
+public String fileupload(MultipartFile uploadFile,Model model) throws Exception {
+    // 编写文件上传逻辑（mvc模式和三层结构模式）
+    // 三层模式：表现层（controller、action）、业务层（service、biz）、持久层（dao、 mapper）
+    // MVC模式主要就是来解决表现层的问题的（原始的表现层是使用Servlet编写，即编写业务逻 辑，又编写视图展示）
+    if (uploadFile != null)
+    {
+        System.out.println(uploadFile.getOriginalFilename());
+        // 原始图片名称
+        String originalFilename = uploadFile.getOriginalFilename();
+        // 如果没有图片名称，则上传不成功
+        if (originalFilename != null && originalFilename.length() > 0) {
+            // 存放图片的物理路径
+            String picPath = "G:\\";
+            // 获取上传文件的扩展名
+            String extName = originalFilename.substring(originalFilename.lastIndexOf("."));
+            // 新文件的名称
+            String newFileName = UUID.randomUUID() + extName;
+            // 新的文件
+            File newFile = new File(picPath + newFileName);
+            // 把上传的文件保存成一个新的文件
+            uploadFile.transferTo(newFile);
+            // 同时需要把新的文件名更新到数据库中
+        }
+    }
+    model.addAttribute("msg","上传成功");
+    return "success";
+}
+```
 
 
 

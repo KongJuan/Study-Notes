@@ -17,6 +17,20 @@
         <property name="prefix" value="/WEB-INF/pages/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
-    <!--配置spring开启注解mvc的支持-->
-    <mvc:annotation-driven></mvc:annotation-driven>
+    <!-- 加载注解驱动 -->
+    <mvc:annotation-driven conversion-service="conversionService"/>
+    <!-- 转换器配置 -->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean ">
+        <property name="converters">
+            <set>
+                <bean class="com.kj.utils.DateConverter"/>
+            </set>
+        </property>
+    </bean>
+
+    <!-- multipart类型解析器，文件上传 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 上传文件的最大尺寸 5M-->
+        <property name="maxUploadSize" value="5242880"/>
+    </bean>
 </beans>
