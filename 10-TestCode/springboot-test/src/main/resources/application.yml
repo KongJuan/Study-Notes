@@ -12,9 +12,46 @@ spring:
     template:
       query-timeout: 1000
 
-#mybatis配置规则
+#  mvc:
+#   static-path-pattern: /img/**
+#  web:
+#    resources:
+#      static-locations: classpath:/image/
+
+  #mybatis配置规则
 #mybatis:
   #全局配置文件位置，可以不写，所有配置都在这里配置
   #config-location: classpath:com/mybatis-config.xml
   #mapper映射文件位置(包名应与XXXMapper类所在包名相同，否则会报BindingException）
   #mapper-locations: classpth:com/kyn/mapper/*.xml
+
+
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:8888
+#  endpoints:
+#    enabled-by-default: true #暴露所有端点信息
+#    web:
+#      exposure:
+#        include: '*'  #以web方式暴露
+#        #include: ['env','beans']
+#      base-path: /base #指定监控终端的基本路径，默认为Actuator
+#  endpoint:
+#    health:
+#      show-details: always
+  #Actuator监控的端口号与上下文路径
+
+#  server:
+#    port: 8989
+#    servlet:
+#      context-path: /xxx
+
+#info:
+#  appName: boot-admin
+#  version: 2.0.1
+#  mavenProjectName: @project.artifactId@  #使用@@可以获取maven的pom文件值
+#  mavenProjectVersion: @project.version@
+
+
+

@@ -4,8 +4,11 @@ import com.kyn.mapper.UserMapper;
 import com.kyn.pojo.User;
 import com.kyn.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController
@@ -38,4 +41,6 @@ public class UserController {
     public User getUser(@RequestParam("name") String name){
         return userService.getUser(name);
     }
+
+
 }
