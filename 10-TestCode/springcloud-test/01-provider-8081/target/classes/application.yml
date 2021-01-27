@@ -15,7 +15,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql:///test?useUnicode=true&amp;characterEncoding=utf8
+    url: jdbc:mysql:///test?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
 # 配置日志
@@ -34,4 +34,4 @@ logging:
     # 在show-sql为true时显示查询结果
     org.hibernate.type.descriptor.sql.BasicExtractor: trace
     # 控制自己代码运行时显示的日志级别
-    com.abc.msc: debug
+    com.kyn.msc: debug
