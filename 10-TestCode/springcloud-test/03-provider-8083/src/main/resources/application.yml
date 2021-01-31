@@ -1,0 +1,67 @@
+server:
+  port: 8083
+
+
+spring:
+  # 配置spring-data-jpa
+  jpa:
+    # 指定是否在spring容器启动的时候创建表，默认为false
+    generate-ddl: true
+    # 指定是否在控制台显示sql语句，默认为false
+    show-sql: true
+    # 指定应用重启时不重新跟新表
+    hibernate:
+      ddl-auto: none
+  # 配置数据源
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  #指定当前微服务对外暴露的名称
+  application:
+    name: kyn01-provider-depart
+# 配置日志
+logging:
+  # 控制日志在控制台的输出格式
+  pattern:
+    console: level-%level %msg%n
+  # 控制日志的显示级别
+  level:
+    # 控制spring Boot启动时显示的日志级别
+    root: info
+    # 控制hibernate运行时的日志级别
+    org.hibernate: info
+    # 在show-sql为true时显示的SQL中的动态参数
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    # 在show-sql为true时显示查询结果
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+    # 控制自己代码运行时显示的日志级别
+    com.kyn.msc: debug
+eureka:
+  #指定eureka服务中心
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  #指定当前客户端在注册中心的名称
+  instance:
+    instance-id: kyn03-provider-8083
+#设置info监控终端显示信息
+info:
+  auth: kyn
+  app.anme: kyn01
+  app.desc: This is a example
+  company.name: www.kyn.com
+  company.addr: Beijing China
+management:
+  #开启所有的监控终端
+  endpoints:
+    enabled-by-default: true #暴露所有端点信息
+    web:
+      exposure:
+        include: '*'
+  #开启shutdown的监控终端
+  endpoint:
+    shutdown:
+      enabled: true

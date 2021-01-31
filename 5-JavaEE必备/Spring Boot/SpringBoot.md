@@ -1709,7 +1709,7 @@ management:
 
 1、开启与禁用Endpoints
 
-- 默认所有的Endpoint除过shutdown都是开启的。
+- **默认所有的Endpoint除过shutdown都是开启的。**
 - 需要开启或者禁用某个Endpoint。配置模式为  **management.endpoint.********.enabled = true**
 
 ```

@@ -7,19 +7,64 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="04-consumer-fallbackmethod-8080" />
+        <module name="04-consumer-feign-fallbackfactory-8080" />
         <module name="01-consumer-8080" />
+        <module name="04-consumer-feign-fallbackmethod-8080" />
+        <module name="03-consumer-feign-8080" />
+        <module name="03-consumer-loadbalance-8080" />
+        <module name="03-consumer-feign-fallbackmethod-8080" />
+        <module name="03-provider-8084" />
+        <module name="03-provider-8083" />
+        <module name="03-provider-8082" />
+        <module name="05-zuul-consumer-8090" />
+        <module name="02-consumer-8080" />
+        <module name="00-eurekaserver-8000" />
+        <module name="05-zuul-consumer-8080" />
         <module name="01-provider-8081" />
+        <module name="00-zuul-9000" />
+        <module name="02-provider-8081" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="00-eurekaserver-8000" target="1.8" />
+      <module name="00-zuul-9000" target="1.8" />
       <module name="01-consumer-8080" target="1.8" />
       <module name="01-provider-8081" target="1.8" />
+      <module name="02-consumer-8080" target="1.8" />
+      <module name="02-provider-8081" target="1.8" />
+      <module name="03-consumer-feign-8080" target="1.8" />
+      <module name="03-consumer-feign-fallbackmethod-8080" target="1.8" />
+      <module name="03-consumer-loadbalance-8080" target="1.8" />
+      <module name="03-provider-8082" target="1.8" />
+      <module name="03-provider-8083" target="1.8" />
+      <module name="03-provider-8084" target="1.8" />
+      <module name="04-consumer-fallbackmethod-8080" target="1.8" />
+      <module name="04-consumer-feign-fallbackfactory-8080" target="1.8" />
+      <module name="04-consumer-feign-fallbackmethod-8080" target="1.8" />
+      <module name="05-zuul-consumer-8080" target="1.8" />
+      <module name="05-zuul-consumer-8090" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="00-eurekaserver-8000" options="-parameters" />
+      <module name="00-zuul-9000" options="-parameters" />
       <module name="01-consumer-8080" options="-parameters" />
       <module name="01-provider-8081" options="-parameters" />
+      <module name="02-consumer-8080" options="-parameters" />
+      <module name="02-provider-8081" options="-parameters" />
+      <module name="03-consumer-feign-8080" options="-parameters" />
+      <module name="03-consumer-feign-fallbackmethod-8080" options="-parameters" />
+      <module name="03-consumer-loadbalance-8080" options="-parameters" />
+      <module name="03-provider-8082" options="-parameters" />
+      <module name="03-provider-8083" options="-parameters" />
+      <module name="03-provider-8084" options="-parameters" />
+      <module name="04-consumer-fallbackmethod-8080" options="-parameters" />
+      <module name="04-consumer-feign-fallbackfactory-8080" options="-parameters" />
+      <module name="04-consumer-feign-fallbackmethod-8080" options="-parameters" />
+      <module name="05-zuul-consumer-8080" options="-parameters" />
+      <module name="05-zuul-consumer-8090" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: kyn01-consumer-depart
+
+eureka:
+  instance:
+    instance-id: kyn01-consumer-8080
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+## 修改负载均衡策略
+#kyn01-provider-depart: # 要负载均衡的提供者微服务名称
+#  ribbon: # 指定要使用的负载均衡策略
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+

@@ -5,10 +5,25 @@
       <list>
         <option value="$PROJECT_DIR$/01-provider-8081/pom.xml" />
         <option value="$PROJECT_DIR$/01-consumer-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/00-eurekaserver-8000/pom.xml" />
+        <option value="$PROJECT_DIR$/02-provider-8081/pom.xml" />
+        <option value="$PROJECT_DIR$/02-consumer-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/03-consumer-feign-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/03-provider-8082/pom.xml" />
+        <option value="$PROJECT_DIR$/03-provider-8083/pom.xml" />
+        <option value="$PROJECT_DIR$/03-provider-8084/pom.xml" />
+        <option value="$PROJECT_DIR$/03-consumer-loadbalance-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/04-consumer-fallbackmethod-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/03-consumer-feign-fallbackmethod-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/04-consumer-feign-fallbackmethos-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/04-consumer-feign-fallbackfactory-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/05-zuul-consumer-8090/pom.xml" />
+        <option value="$PROJECT_DIR$/00-zuul-9000/pom.xml" />
+        <option value="$PROJECT_DIR$/05-zuul-consumer-8080/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

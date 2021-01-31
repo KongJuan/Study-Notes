@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/00-eurekaserver-8000/00-eurekaserver-8000.iml" filepath="$PROJECT_DIR$/00-eurekaserver-8000/00-eurekaserver-8000.iml" />
+      <module fileurl="file://$PROJECT_DIR$/00-zuul-9000/00-zuul-9000.iml" filepath="$PROJECT_DIR$/00-zuul-9000/00-zuul-9000.iml" />
       <module fileurl="file://$PROJECT_DIR$/01-consumer-8080/01-consumer-8080.iml" filepath="$PROJECT_DIR$/01-consumer-8080/01-consumer-8080.iml" />
       <module fileurl="file://$PROJECT_DIR$/01-provider-8081/01-provider-8081.iml" filepath="$PROJECT_DIR$/01-provider-8081/01-provider-8081.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-consumer-8080/02-consumer-8080.iml" filepath="$PROJECT_DIR$/02-consumer-8080/02-consumer-8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-provider-8081/02-provider-8081.iml" filepath="$PROJECT_DIR$/02-provider-8081/02-provider-8081.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-consumer-feign-8080/03-consumer-feign-8080.iml" filepath="$PROJECT_DIR$/03-consumer-feign-8080/03-consumer-feign-8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-consumer-loadbalance-8080/03-consumer-loadbalance-8080.iml" filepath="$PROJECT_DIR$/03-consumer-loadbalance-8080/03-consumer-loadbalance-8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-provider-8082/03-provider-8082.iml" filepath="$PROJECT_DIR$/03-provider-8082/03-provider-8082.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-provider-8083/03-provider-8083.iml" filepath="$PROJECT_DIR$/03-provider-8083/03-provider-8083.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-provider-8084/03-provider-8084.iml" filepath="$PROJECT_DIR$/03-provider-8084/03-provider-8084.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-consumer-fallbackmethod-8080/04-consumer-fallbackmethod-8080.iml" filepath="$PROJECT_DIR$/04-consumer-fallbackmethod-8080/04-consumer-fallbackmethod-8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-consumer-feign-fallbackfactory-8080/04-consumer-feign-fallbackfactory-8080.iml" filepath="$PROJECT_DIR$/04-consumer-feign-fallbackfactory-8080/04-consumer-feign-fallbackfactory-8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-consumer-feign-fallbackmethos-8080/04-consumer-feign-fallbackmethod-8080.iml" filepath="$PROJECT_DIR$/04-consumer-feign-fallbackmethos-8080/04-consumer-feign-fallbackmethod-8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-zuul-consumer-8080/05-zuul-consumer-8080.iml" filepath="$PROJECT_DIR$/05-zuul-consumer-8080/05-zuul-consumer-8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-zuul-consumer-8090/05-zuul-consumer-8090.iml" filepath="$PROJECT_DIR$/05-zuul-consumer-8090/05-zuul-consumer-8090.iml" />
     </modules>
   </component>
 </project>
