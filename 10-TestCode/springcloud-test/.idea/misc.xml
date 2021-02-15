@@ -20,6 +20,9 @@
         <option value="$PROJECT_DIR$/05-zuul-consumer-8090/pom.xml" />
         <option value="$PROJECT_DIR$/00-zuul-9000/pom.xml" />
         <option value="$PROJECT_DIR$/05-zuul-consumer-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/00-configserver-9999/pom.xml" />
+        <option value="$PROJECT_DIR$/06-config-eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/06-config-provider/pom.xml" />
       </list>
     </option>
   </component>

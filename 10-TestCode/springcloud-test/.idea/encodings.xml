@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/00-configserver-9999/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/00-configserver-9999/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/00-configserver-9999/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/00-eurekaserver-8000/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/00-eurekaserver-8000/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/00-zuul-9000/src/main/java" charset="UTF-8" />
@@ -30,6 +33,10 @@
     <file url="file://$PROJECT_DIR$/05-zuul-consumer-8080/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/05-zuul-consumer-8090/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/05-zuul-consumer-8090/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-config-eurekaserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-config-eurekaserver/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-config-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-config-provider/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

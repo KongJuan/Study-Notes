@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/00-configserver-9999/00-configserver-9999.iml" filepath="$PROJECT_DIR$/00-configserver-9999/00-configserver-9999.iml" />
       <module fileurl="file://$PROJECT_DIR$/00-eurekaserver-8000/00-eurekaserver-8000.iml" filepath="$PROJECT_DIR$/00-eurekaserver-8000/00-eurekaserver-8000.iml" />
       <module fileurl="file://$PROJECT_DIR$/00-zuul-9000/00-zuul-9000.iml" filepath="$PROJECT_DIR$/00-zuul-9000/00-zuul-9000.iml" />
       <module fileurl="file://$PROJECT_DIR$/01-consumer-8080/01-consumer-8080.iml" filepath="$PROJECT_DIR$/01-consumer-8080/01-consumer-8080.iml" />
@@ -18,6 +19,8 @@
       <module fileurl="file://$PROJECT_DIR$/04-consumer-feign-fallbackmethos-8080/04-consumer-feign-fallbackmethod-8080.iml" filepath="$PROJECT_DIR$/04-consumer-feign-fallbackmethos-8080/04-consumer-feign-fallbackmethod-8080.iml" />
       <module fileurl="file://$PROJECT_DIR$/05-zuul-consumer-8080/05-zuul-consumer-8080.iml" filepath="$PROJECT_DIR$/05-zuul-consumer-8080/05-zuul-consumer-8080.iml" />
       <module fileurl="file://$PROJECT_DIR$/05-zuul-consumer-8090/05-zuul-consumer-8090.iml" filepath="$PROJECT_DIR$/05-zuul-consumer-8090/05-zuul-consumer-8090.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-config-eurekaserver/06-config-eurekaserver.iml" filepath="$PROJECT_DIR$/06-config-eurekaserver/06-config-eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-config-provider/06-config-provider.iml" filepath="$PROJECT_DIR$/06-config-provider/06-config-provider.iml" />
     </modules>
   </component>
 </project>

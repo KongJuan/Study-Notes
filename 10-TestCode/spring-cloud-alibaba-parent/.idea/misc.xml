@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/01-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/01-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/02-consumer-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/02-provider-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/03-provider-nacos-config/pom.xml" />
+        <option value="$PROJECT_DIR$/04-consumer-nacos-fegin/pom.xml" />
+        <option value="$PROJECT_DIR$/04-provider-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/05-gateway-config/pom.xml" />
+        <option value="$PROJECT_DIR$/05-gateway-api/pom.xml" />
+        <option value="$PROJECT_DIR$/05-gateway-config-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/05-gateway-api-filter-custom/pom.xml" />
+        <option value="$PROJECT_DIR$/05-gateway-config-filter/pom.xml" />
+        <option value="$PROJECT_DIR$/05-showinfo/pom.xml" />
+        <option value="$PROJECT_DIR$/06-consumer-nacos-sentinel/pom.xml" />
+        <option value="$PROJECT_DIR$/06-provider-nacos-sentinel/pom.xml" />
+        <option value="$PROJECT_DIR$/06-consumer-nacos-sentinel-circuitbreaking/pom.xml" />
+        <option value="$PROJECT_DIR$/06-consumer-nacos-sentinel-degrade/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
