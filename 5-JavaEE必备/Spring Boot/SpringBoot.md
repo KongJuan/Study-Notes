@@ -237,6 +237,8 @@ public @interface SpringBootApplication {
 
 ## 2.SpringBoot基础配置
 
+
+
 ## 3.模板引擎—Thymeleaf
 
 
