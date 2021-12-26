@@ -33,7 +33,7 @@ Lambda 表达式：在Java 8 语言中引入的一种新的语法元素和操作
 
 ​        左侧：**指定了 Lambda 表达式需要的**参数列表（方法的形参）
 
-​        右侧：**指定了 **Lambda **体**，是抽象方法的实现逻辑，也即Lambda 表达式要执行的功能（方体）
+​        右侧：**指定了 **Lambda **体**，是抽象方法的实现逻辑，也即Lambda 表达式要执行的功能（方法体）
 
 通用格式：
 
@@ -1164,7 +1164,7 @@ public class StreamTest {
         //allMatch(Predicate p)——检查是否匹配所有元素。
         //练习：是否所有的员工的年龄都大于18
         boolean allMatch = EmployeeData.getEmployees().stream()
-                .allMatch(e -> e.getAge() > 18);
+                .allMatch(e -> e.getAge() > 18);			
         System.out.println(allMatch);
 
         //anyMatch(Predicate p)——检查是否至少匹配一个元素。
